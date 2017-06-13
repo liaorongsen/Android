@@ -11,12 +11,29 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    buildTypes {
+
+    signingConfigs {
         release {
-            minifyEnabled false
+            storeFile file("release.keystore")
+            storePassword "test1234"
+            keyAlias "androidreleasekey"
+            keyPassword "test1234"
+        }
+    }
+    buildTypes {
+
+        debug {//debug版本使用一个自动创建的密钥/证书，并使用已知的name/password来签名(防止构建过程中出现请求提示)。
+
+        }
+        release {//release版本在构建过程中没有签名，需要稍后签名。
+            minifyEnabled true //是否开起混淆
+            debuggable true
+            jniDebuggable true
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
@@ -24,8 +41,13 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
+    compile project(':viewandutil')
+
+
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
     compile 'com.android.support:design:25.2.0'
+
     testCompile 'junit:junit:4.12'
 }
