@@ -1,5 +1,6 @@
-package com.lrs.test;
+package com.lrs.test.activity.base;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
@@ -47,5 +48,10 @@ public class BaseActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         LogUtil.e(getClass().getSimpleName() + "-->" + "onDestroy");
+    }
+
+    protected void nav(Class<?> cls) {
+        Intent intent = new Intent(this, cls);
+        startActivity(intent);
     }
 }
