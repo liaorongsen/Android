@@ -13,7 +13,9 @@ import android.widget.ListView;
 import com.lrs.test.activity.base.BaseActivity;
 import com.lrs.test.R;
 import com.lrs.test.activity.rn.ReactNativeActivity;
+import com.lrs.test.activity.rx.RxActivity;
 import com.lrs.test.activity.widget.ImagePickerActivity;
+import com.lrs.test.mvp.LoginActivity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -88,6 +90,10 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
         } else if (mData.get(2).equals(clickMenu)) {
             nav(ImagePickerActivity.class);
+        } else if (mData.get(3).equals(clickMenu)) {
+            nav(RxActivity.class);
+        }else if (mData.get(4).equals(clickMenu)) {
+            nav(LoginActivity.class);
         }
 
     }

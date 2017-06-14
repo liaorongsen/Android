@@ -15,6 +15,10 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
         mApp = (MyApp) getApplicationContext();
-        LogUtil.e(getClass().getSimpleName()+"-->"+"onCreate");
+        LogUtil.e(getClass().getSimpleName() + "-->" + "onCreate");
+    }
+
+    public static MyApp getApp() {
+        return mApp;
     }
 }
