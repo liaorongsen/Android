@@ -6,6 +6,6 @@
     <array name="main">
         <item>ReactNative</item>
         <item>Test</item>
-
+        <item>ImagePicker</item>
     </array>
 </resources>
