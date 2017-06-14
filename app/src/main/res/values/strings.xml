@@ -9,6 +9,7 @@
         <item>ImagePicker</item>
         <item>Rx</item>
         <item>MvpLogin</item>
+        <item>StepCounter</item>
     </array>
     <string name="title_activity_login2">Sign in</string>
 
