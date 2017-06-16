@@ -1,9 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.lrs.test.activity.common.StepCounterActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+    <!--<TextView-->
+    <!--android:text="25"-->
+    <!--android:id="@+id/tv_step_count"-->
+    <!--style="@style/AppTheme.TextView"-->
+    <!--android:textSize="30sp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:background="@color/blue"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textStyle="bold"-->
+    <!--/>-->
+    <!--<com.lrs.viewandutil.view.TranslucenceTextView-->
+    <!--style="@style/AppTheme.TextView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Test" />-->
+
+    <!--<ProgressBar-->
+    <!--style="@style/Widget.AppCompat.ProgressBar"-->
+    <!--android:id="@+id/progress"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="100dp" />-->
+
+    <!--<android.support.v4.widget.ContentLoadingProgressBar-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_width="64dp"-->
+    <!--android:layout_height="64dp" />-->
+
+    <com.lrs.viewandutil.view.FlowLayout
+        android:id="@+id/flowlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </com.lrs.viewandutil.view.FlowLayout>
+
+    <com.lrs.viewandutil.view.GridLayout
+        android:id="@+id/gridlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/flowlayout">
+
+        <com.lrs.viewandutil.view.TranslucenceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="测试" />
+
+        <com.lrs.viewandutil.view.TranslucenceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="测试" />
+
+        <com.lrs.viewandutil.view.TranslucenceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="测试" />
+
+        <com.lrs.viewandutil.view.TranslucenceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="测试" />
+
+        <com.lrs.viewandutil.view.TranslucenceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="测试" />
+    </com.lrs.viewandutil.view.GridLayout>
+</RelativeLayout>
