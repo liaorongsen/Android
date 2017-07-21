@@ -2,8 +2,8 @@
 
 *.iml
 /local.properties
-/.idea/
-/build/
-/.gradle/
-viewandutil/build/
-app/build/
+/.idea
+/build
+/.gradle
+viewandutil/build
+app/build

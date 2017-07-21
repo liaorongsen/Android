@@ -28,7 +28,6 @@ android {
         }
     }
     buildTypes {
-
         debug {//debug版本使用一个自动创建的密钥/证书，并使用已知的name/password来签名(防止构建过程中出现请求提示)。
 
         }
@@ -62,8 +61,6 @@ android {
         }
 
     }
-
-
 
     lintOptions {
         // set to true to turn off analysis progress reporting by lint
@@ -130,12 +127,11 @@ dependencies {
 
     compile project(':viewandutil')
 
-
     compile 'io.reactivex:rxjava:1.0.14'
     compile 'io.reactivex:rxandroid:1.0.1'
-    compile 'com.facebook.react:react-native:+'
-    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.facebook.react:react-native:0.20.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.1'
-    compile 'com.android.support:design:25.2.0'
+    compile 'com.android.support:design:25.3.1'
     testCompile 'junit:junit:4.12'
 }
