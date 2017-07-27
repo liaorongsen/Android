@@ -1,5 +1,7 @@
 package com.lrs.test.activity.main;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,6 +19,7 @@ import com.lrs.test.activity.rn.ReactNativeActivity;
 import com.lrs.test.activity.rx.RxActivity;
 import com.lrs.test.activity.widget.ImagePickerActivity;
 import com.lrs.test.mvp.LoginActivity;
+import com.lrs.viewandutil.util.MathUtil;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -33,7 +36,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -48,11 +51,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
         mMainList = (ListView) findViewById(R.id.main_list);
         mMainList.setOnItemClickListener(this);
-        String[] stringArray = getResources().getStringArray(R.array.main);
-        if (mData == null) {
-            mData = new ArrayList<String>();
-        }
-        Collections.addAll(mData, stringArray);
+        mData = (List<String>) MathUtil.copyToList(LayoutMapping.getAllKeys());
         mAdapter = new MainAdapter(this, mData);
         mMainList.setAdapter(mAdapter);
 
@@ -83,23 +82,14 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         String clickItem = mData.get(position);
-        performClick(clickItem);
+        navTo(clickItem, LayoutMapping.get(clickItem));
     }
 
-    private void performClick(String clickMenu) {
-        if (mData.get(0).equals(clickMenu)) {
-            nav(ReactNativeActivity.class);
-        } else if (mData.get(1).equals(clickMenu)) {
 
-        } else if (mData.get(2).equals(clickMenu)) {
-            nav(ImagePickerActivity.class);
-        } else if (mData.get(3).equals(clickMenu)) {
-            nav(RxActivity.class);
-        } else if (mData.get(4).equals(clickMenu)) {
-            nav(LoginActivity.class);
-        } else if (mData.get(5).equals(clickMenu)) {
-            nav(StepCounterActivity.class);
-        }
+    private void navTo(String key, Class<? extends Activity> cls) {
 
+        Intent intent = new Intent(this, cls);
+        intent.putExtra(BaseActivity.EXTRA_KEY, key);
+        startActivity(intent);
     }
 }

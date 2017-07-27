@@ -40,10 +40,7 @@
         <activity android:name=".activity.rx.RxActivity" />
         <activity android:name=".activity.widget.ImagePickerActivity" />
         <activity android:name=".mvp.LoginActivity" />
-        <activity
-            android:name=".Login2Activity"
-            android:label="@string/title_activity_login2" />
-        <activity android:name=".activity.common.StepCounterActivity"></activity>
+        <activity android:name=".activity.common.GlideTestActivity"/>
     </application>
 
 </manifest>

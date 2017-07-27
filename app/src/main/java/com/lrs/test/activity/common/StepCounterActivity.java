@@ -40,13 +40,6 @@ public class StepCounterActivity extends BaseActivity {
         LinearLayout.MarginLayoutParams lp = new LinearLayout.LayoutParams(-2, -2);
         lp.setMargins(10, 10, 10, 10);
 
-        String[] tabs = getResources().getStringArray(R.array.tabs);
-        for (String s : tabs) {
-            TranslucenceTextView t = new TranslucenceTextView(this);
-            t.setText(s);
-            t.setPadding(7, 5, 7, 5);
-            mFlowLayout.addView(t, lp);
-        }
     }
 
 
