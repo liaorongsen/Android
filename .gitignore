@@ -7,3 +7,4 @@
 /.gradle
 viewandutil/build
 app/build
+gradle/wrapper/gradle-3.3-all.zip
