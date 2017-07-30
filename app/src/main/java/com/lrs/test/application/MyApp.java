@@ -6,6 +6,7 @@ import com.lrs.test.R;
 import com.lrs.test.activity.common.GlideTestActivity;
 import com.lrs.test.activity.main.LayoutMapping;
 import com.lrs.test.activity.rn.ReactNativeActivity;
+import com.lrs.test.activity.widget.DatePickerActivity;
 import com.lrs.viewandutil.util.LogUtil;
 import com.lrs.viewandutil.util.SPUtil;
 
@@ -28,6 +29,7 @@ public class MyApp extends Application {
     private void initLayoutMap() {
         LayoutMapping.put("ReactNative", ReactNativeActivity.class, Integer.MIN_VALUE);
         LayoutMapping.put("Glide", GlideTestActivity.class, R.layout.activity_gilde);
+        LayoutMapping.put("DatePicker", DatePickerActivity.class, R.layout.activity_datepicker);
     }
 
     public static MyApp getApp() {

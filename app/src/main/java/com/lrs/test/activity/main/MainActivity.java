@@ -14,15 +14,8 @@ import android.widget.ListView;
 
 import com.lrs.test.activity.base.BaseActivity;
 import com.lrs.test.R;
-import com.lrs.test.activity.common.StepCounterActivity;
-import com.lrs.test.activity.rn.ReactNativeActivity;
-import com.lrs.test.activity.rx.RxActivity;
-import com.lrs.test.activity.widget.ImagePickerActivity;
-import com.lrs.test.mvp.LoginActivity;
 import com.lrs.viewandutil.util.MathUtil;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class MainActivity extends BaseActivity implements AdapterView.OnItemClickListener {
