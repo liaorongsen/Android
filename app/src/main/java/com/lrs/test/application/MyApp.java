@@ -6,7 +6,10 @@ import com.lrs.test.R;
 import com.lrs.test.activity.common.GlideTestActivity;
 import com.lrs.test.activity.main.LayoutMapping;
 import com.lrs.test.activity.rn.ReactNativeActivity;
+import com.lrs.test.activity.widget.DatePickActivity2;
 import com.lrs.test.activity.widget.DatePickerActivity;
+import com.lrs.test.activity.widget.DatePickerDialogActivity;
+import com.lrs.test.activity.widget.MaterialCalendarViewActivity;
 import com.lrs.viewandutil.util.LogUtil;
 import com.lrs.viewandutil.util.SPUtil;
 
@@ -30,7 +33,11 @@ public class MyApp extends Application {
         LayoutMapping.put("ReactNative", ReactNativeActivity.class, Integer.MIN_VALUE);
         LayoutMapping.put("Glide", GlideTestActivity.class, R.layout.activity_gilde);
         LayoutMapping.put("DatePicker", DatePickerActivity.class, R.layout.activity_datepicker);
+        LayoutMapping.put("DatePicker2", DatePickActivity2.class, R.layout.activity_date_picker);
+        LayoutMapping.put("MaterialCalendarView", MaterialCalendarViewActivity.class, R.layout.activity_material_calendarview);
+        LayoutMapping.put("DatePickerDialog", DatePickerDialogActivity.class, R.layout.activity_datepickerdialog);
     }
+
 
     public static MyApp getApp() {
         return mApp;

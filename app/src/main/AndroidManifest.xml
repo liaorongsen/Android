@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lrs.test">
 
-    <meta-mata></meta-mata>
+    <meta-mata />
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -38,7 +38,10 @@
         <activity android:name=".activity.widget.ImagePickerActivity" />
         <activity android:name=".mvp.LoginActivity" />
         <activity android:name=".activity.common.GlideTestActivity" />
-        <activity android:name=".activity.widget.DatePickerActivity"></activity>
+        <activity android:name=".activity.widget.DatePickerActivity" />
+        <activity android:name=".activity.widget.DatePickActivity2" />
+        <activity android:name=".activity.widget.DatePickerDialogActivity" />
+        <activity android:name=".activity.widget.MaterialCalendarViewActivity"/>
     </application>
 
 </manifest>
