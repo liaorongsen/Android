@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity implements LoginViewWatcher
 
     @Override
     public void preLogin() {
-
+ ToastUtil.show(MyApp.getApp(), "Login");
     }
 
 
