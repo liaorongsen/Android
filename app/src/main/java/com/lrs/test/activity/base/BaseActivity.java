@@ -35,12 +35,16 @@ public static final String EXTRA_KEY_1 = "KEY";
     @Override
     protected void onStart() {
         super.onStart();
+
+
         LogUtil.e(getClass().getSimpleName() + "-->" + "onStart");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+
+        
         LogUtil.e(getClass().getSimpleName() + "-->" + "onResume");
     }
 
