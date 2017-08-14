@@ -14,6 +14,9 @@ public class LoginPresenterImp implements LoginPresenter, LoginBizImp.OnLoginRes
 
 
     public LoginPresenterImp(LoginViewWatcher mLoginView) {
+
+
+
         this.mLoginView = mLoginView;
         this.mLoginBiz = new LoginBizImp(this);
     }
