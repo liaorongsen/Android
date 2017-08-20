@@ -18,7 +18,8 @@ public class BaseActivity extends AppCompatActivity {
 
     public static final String EXTRA_KEY = "KEY";
 
-public static final String EXTRA_KEY_1 = "KEY";
+    public static final String EXTRA_KEY_1 = "KEY";
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +45,7 @@ public static final String EXTRA_KEY_1 = "KEY";
     protected void onResume() {
         super.onResume();
 
-        
+
         LogUtil.e(getClass().getSimpleName() + "-->" + "onResume");
     }
 

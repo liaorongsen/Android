@@ -10,10 +10,7 @@ import android.widget.TextView;
 
 import com.lrs.test.R;
 import com.lrs.test.activity.base.BaseActivity;
-import com.lrs.viewandutil.view.FlowLayout;
-import com.lrs.viewandutil.view.TranslucenceTextView;
-
-import java.util.ArrayList;
+import com.lrs.viewandutil.widget.FlowLayout;
 
 public class StepCounterActivity extends BaseActivity {
 

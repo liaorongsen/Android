@@ -10,6 +10,8 @@ import com.lrs.test.activity.widget.DatePickActivity2;
 import com.lrs.test.activity.widget.DatePickerActivity;
 import com.lrs.test.activity.widget.DatePickerDialogActivity;
 import com.lrs.test.activity.widget.MaterialCalendarViewActivity;
+import com.lrs.test.activity.widget.SurfaceViewActivity;
+import com.lrs.test.activity.widget.UiStudyActivity;
 import com.lrs.viewandutil.util.LogUtil;
 import com.lrs.viewandutil.util.SPUtil;
 
@@ -36,6 +38,8 @@ public class MyApp extends Application {
         LayoutMapping.put("DatePicker2", DatePickActivity2.class, R.layout.activity_date_picker);
         LayoutMapping.put("MaterialCalendarView", MaterialCalendarViewActivity.class, R.layout.activity_material_calendarview);
         LayoutMapping.put("DatePickerDialog", DatePickerDialogActivity.class, R.layout.activity_datepickerdialog);
+        LayoutMapping.put("SurfaceView", SurfaceViewActivity.class, R.layout.activity_surface_view);
+        LayoutMapping.put("UiStudy", UiStudyActivity.class, R.layout.activity_ui_study);
     }
 
 

@@ -1,4 +1,4 @@
-package com.lrs.viewandutil.view;
+package com.lrs.viewandutil.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;

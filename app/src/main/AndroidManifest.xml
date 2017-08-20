@@ -41,7 +41,9 @@
         <activity android:name=".activity.widget.DatePickerActivity" />
         <activity android:name=".activity.widget.DatePickActivity2" />
         <activity android:name=".activity.widget.DatePickerDialogActivity" />
-        <activity android:name=".activity.widget.MaterialCalendarViewActivity"/>
+        <activity android:name=".activity.widget.MaterialCalendarViewActivity" />
+        <activity android:name=".activity.widget.SurfaceViewActivity" />
+        <activity android:name=".activity.widget.UiStudyActivity"/>
     </application>
 
 </manifest>

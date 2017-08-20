@@ -17,7 +17,7 @@
     <!--android:textColor="@android:color/white"-->
     <!--android:textStyle="bold"-->
     <!--/>-->
-    <!--<com.lrs.viewandutil.view.TranslucenceTextView-->
+    <!--<com.lrs.viewandutil.widget.TranslucenceTextView-->
     <!--style="@style/AppTheme.TextView"-->
     <!--android:layout_width="match_parent"-->
     <!--android:layout_height="wrap_content"-->
@@ -34,47 +34,47 @@
     <!--android:layout_width="64dp"-->
     <!--android:layout_height="64dp" />-->
 
-    <com.lrs.viewandutil.view.FlowLayout
+    <com.lrs.viewandutil.widget.FlowLayout
         android:id="@+id/flowlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-    </com.lrs.viewandutil.view.FlowLayout>
+    </com.lrs.viewandutil.widget.FlowLayout>
 
-    <com.lrs.viewandutil.view.GridLayout
+    <com.lrs.viewandutil.widget.GridLayout
         android:id="@+id/gridlayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/flowlayout">
 
-        <com.lrs.viewandutil.view.TranslucenceTextView
+        <com.lrs.viewandutil.widget.TranslucenceTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="测试" />
 
-        <com.lrs.viewandutil.view.TranslucenceTextView
+        <com.lrs.viewandutil.widget.TranslucenceTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="测试" />
 
-        <com.lrs.viewandutil.view.TranslucenceTextView
+        <com.lrs.viewandutil.widget.TranslucenceTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="测试" />
 
-        <com.lrs.viewandutil.view.TranslucenceTextView
+        <com.lrs.viewandutil.widget.TranslucenceTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="测试" />
 
-        <com.lrs.viewandutil.view.TranslucenceTextView
+        <com.lrs.viewandutil.widget.TranslucenceTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="测试" />
-    </com.lrs.viewandutil.view.GridLayout>
+    </com.lrs.viewandutil.widget.GridLayout>
 </RelativeLayout>
