@@ -28,7 +28,7 @@ public class MyApp extends Application {
         mApp = (MyApp) getApplicationContext();
         SPUtil.getInstance().init(getApplicationContext());
         initLayoutMap();
-        LogUtil.e(getClass().getSimpleName() + "-->" + "onCreate");
+        LogUtil.e(getClass(), "onCreate");
     }
 
     private void initLayoutMap() {

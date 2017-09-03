@@ -8,11 +8,9 @@ import android.util.Log;
 
 public class LogUtil {
 
-    public static void e(String msg) {
-        Log.e("TAG", msg);
+    public static void e(Class cls, String msg) {
+        Log.e("TAG", cls.getSimpleName() + "-->" + msg);
     }
-
-
 
 
 }

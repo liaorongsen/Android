@@ -50,7 +50,7 @@ public class FlowLayout extends LinearLayout implements View.OnClickListener {
             if (mostH < getChildMarginHeight(p, child)) {
                 mostH = getChildMarginHeight(p, child);
             }
-            LogUtil.e("totalW=" + totalW + "totalH=" + totalH);
+            LogUtil.e(getClass(), "totalW=" + totalW + "totalH=" + totalH);
             if (totalW + getChildMarginWidth(p, child) >= getMeasuredWidth()) {//当行显示将要超过时；
                 totalW = 0;
                 totalH += mostH;

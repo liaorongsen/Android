@@ -6,6 +6,7 @@ import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.view.MotionEvent;
 
 import com.lrs.test.activity.main.LayoutMapping;
 import com.lrs.viewandutil.util.LogUtil;
@@ -30,7 +31,7 @@ public class BaseActivity extends AppCompatActivity {
                 setContentView(LayoutMapping.getLayoutId(key));
         }
 
-        LogUtil.e(getClass().getSimpleName() + "-->" + "onCreate");
+        LogUtil.e(getClass(), "onCreate");
     }
 
     @Override
@@ -38,7 +39,7 @@ public class BaseActivity extends AppCompatActivity {
         super.onStart();
 
 
-        LogUtil.e(getClass().getSimpleName() + "-->" + "onStart");
+        LogUtil.e(getClass(), "onStart");
     }
 
     @Override
@@ -46,29 +47,41 @@ public class BaseActivity extends AppCompatActivity {
         super.onResume();
 
 
-        LogUtil.e(getClass().getSimpleName() + "-->" + "onResume");
+        LogUtil.e(getClass(), "onResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        LogUtil.e(getClass().getSimpleName() + "-->" + "onPause");
+        LogUtil.e(getClass(), "onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        LogUtil.e(getClass().getSimpleName() + "-->" + "onStop");
+        LogUtil.e(getClass(), "onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        LogUtil.e(getClass().getSimpleName() + "-->" + "onDestroy");
+        LogUtil.e(getClass(), "onDestroy");
     }
 
     protected void nav(Class<?> cls) {
         Intent intent = new Intent(this, cls);
         startActivity(intent);
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        LogUtil.e(getClass(), "dispatchTouchEvent");
+        return super.dispatchTouchEvent(ev);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        LogUtil.e(getClass(), "onTouchEvent");
+        return super.onTouchEvent(event);
     }
 }
