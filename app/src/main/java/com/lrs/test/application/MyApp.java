@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.lrs.test.R;
 import com.lrs.test.activity.common.GlideTestActivity;
+import com.lrs.test.activity.common.wechat.WeChatMainActivity;
 import com.lrs.test.activity.main.LayoutMapping;
 import com.lrs.test.activity.rn.ReactNativeActivity;
 import com.lrs.test.activity.widget.DatePickActivity2;
@@ -40,6 +41,9 @@ public class MyApp extends Application {
         LayoutMapping.put("DatePickerDialog", DatePickerDialogActivity.class, R.layout.activity_datepickerdialog);
         LayoutMapping.put("SurfaceView", SurfaceViewActivity.class, R.layout.activity_surface_view);
         LayoutMapping.put("UiStudy", UiStudyActivity.class, R.layout.activity_ui_study);
+        LayoutMapping.put("仿微信主界面", WeChatMainActivity.class, R.layout.activity_we_chat_main);
+
+
     }
 
 
