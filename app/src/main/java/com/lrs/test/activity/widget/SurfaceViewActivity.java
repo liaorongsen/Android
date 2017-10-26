@@ -5,15 +5,22 @@ import android.os.Bundle;
 import android.view.SurfaceView;
 
 import com.lrs.test.R;
+import com.lrs.test.activity.base.BaseActivity;
+import com.lrs.viewandutil.widget.MSurfaceView;
 
-public class SurfaceViewActivity extends Activity {
+public class SurfaceViewActivity extends BaseActivity {
 
-    private SurfaceView surfaceView;
+    private MSurfaceView surfaceView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        surfaceView = (SurfaceView) findViewById(R.id.surfaceview);
+        surfaceView = (MSurfaceView) findViewById(R.id.surfaceview);
+
+
+       // surfaceView.draw();
     }
+
+
 }

@@ -12,5 +12,9 @@ public class LogUtil {
         Log.e("TAG", cls.getSimpleName() + "-->" + msg);
     }
 
+    public static void e(String msg) {
+        Log.e("TAG", msg);
+    }
+
 
 }
