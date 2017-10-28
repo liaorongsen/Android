@@ -21,29 +21,17 @@
             android:name=".activity.main.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+
+        <activity android:name=".activity.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-        <activity
-            android:name=".activity.rn.ReactNativeActivity"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".activity.rx.RxActivity" />
-        <activity android:name=".activity.widget.ImagePickerActivity" />
-        <activity android:name=".mvp.LoginActivity" />
-        <activity android:name=".activity.common.GlideTestActivity" />
-        <activity android:name=".activity.widget.DatePickerActivity" />
-        <activity android:name=".activity.widget.DatePickActivity2" />
-        <activity android:name=".activity.widget.DatePickerDialogActivity" />
-        <activity android:name=".activity.widget.MaterialCalendarViewActivity" />
-        <activity android:name=".activity.widget.SurfaceViewActivity" />
-        <activity android:name=".activity.widget.UiStudyActivity" />
-        <activity android:name=".activity.common.wechat.WeChatMainActivity" />
-        <activity android:name=".activity.splash.SplashActivity"></activity>
     </application>
 
 </manifest>

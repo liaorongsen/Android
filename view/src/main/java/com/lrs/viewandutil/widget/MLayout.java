@@ -6,7 +6,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.RelativeLayout;
 
-import com.lrs.viewandutil.util.LogUtil;
+import com.example.util.utils.LogUtil;
+
 
 /**
  * Created by 廖荣森 on 2017/8/20.

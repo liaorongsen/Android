@@ -11,8 +11,8 @@ import android.util.DisplayMetrics;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-import com.lrs.viewandutil.R;
-import com.lrs.viewandutil.util.LogUtil;
+import com.example.util.utils.LogUtil;
+
 
 /**
  * Created by 廖荣森 on 2017/10/24.

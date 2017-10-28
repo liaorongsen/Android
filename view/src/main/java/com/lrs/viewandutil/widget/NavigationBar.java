@@ -8,8 +8,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.example.util.utils.MathUtil;
 import com.lrs.viewandutil.R;
-import com.lrs.viewandutil.util.MathUtil;
 
 
 /**

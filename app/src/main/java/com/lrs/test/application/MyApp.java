@@ -2,8 +2,11 @@ package com.lrs.test.application;
 
 import android.app.Application;
 
+import com.example.network.okhttp.OkHttpUtils;
 import com.example.util.utils.LogUtil;
 import com.example.util.utils.SPUtil;
+
+import okhttp3.OkHttpClient;
 
 
 /**
@@ -19,8 +22,15 @@ public class MyApp extends Application {
         mApp = (MyApp) getApplicationContext();
         SPUtil.getInstance().init(getApplicationContext());
         LogUtil.e(getClass(), "onCreate");
+
+        initNetWork();
     }
 
+
+
+    private void initNetWork(){
+
+    }
 
 
     public static MyApp getApp() {

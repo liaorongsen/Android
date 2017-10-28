@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 
 import com.lrs.viewandutil.R;
-import com.lrs.viewandutil.util.LogUtil;
 
 /**
  * Created by wb-lrs192703 on 2017/6/15.
