@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lrs.test">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
@@ -43,7 +42,8 @@
         <activity android:name=".activity.widget.MaterialCalendarViewActivity" />
         <activity android:name=".activity.widget.SurfaceViewActivity" />
         <activity android:name=".activity.widget.UiStudyActivity" />
-        <activity android:name=".activity.common.wechat.WeChatMainActivity"/>
+        <activity android:name=".activity.common.wechat.WeChatMainActivity" />
+        <activity android:name=".activity.splash.SplashActivity"></activity>
     </application>
 
 </manifest>
