@@ -1,1 +1,1 @@
-include ':app', ':viewandutil'
+include ':app', ':viewandutil', ':network', ':log'
