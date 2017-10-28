@@ -10,18 +10,13 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
-import android.widget.ListView;
 
 import com.lrs.test.activity.base.BaseActivity;
 import com.lrs.test.R;
-import com.lrs.viewandutil.util.MathUtil;
 
-import java.util.List;
 
 public class MainActivity extends BaseActivity implements AdapterView.OnItemClickListener {
-    private ListView mMainList;
-    private MainAdapter mAdapter;
-    private List<String> mData;
+
 
 
     @Override
@@ -42,11 +37,6 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
             }
         });
 
-        mMainList = (ListView) findViewById(R.id.main_list);
-        mMainList.setOnItemClickListener(this);
-        mData = (List<String>) MathUtil.copyToList(LayoutMapping.getAllKeys());
-        mAdapter = new MainAdapter(this, mData);
-        mMainList.setAdapter(mAdapter);
 
     }
 
@@ -76,15 +66,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        String clickItem = mData.get(position);
-        navTo(clickItem, LayoutMapping.get(clickItem));
+
     }
 
 
-    private void navTo(String key, Class<? extends Activity> cls) {
 
-        Intent intent = new Intent(this, cls);
-        intent.putExtra(BaseActivity.EXTRA_KEY, key);
-        startActivity(intent);
-    }
 }

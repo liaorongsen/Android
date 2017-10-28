@@ -6,7 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/log/log.iml" filepath="$PROJECT_DIR$/log/log.iml" />
       <module fileurl="file://$PROJECT_DIR$/network/network.iml" filepath="$PROJECT_DIR$/network/network.iml" />
-      <module fileurl="file://$PROJECT_DIR$/viewandutil/viewandutil.iml" filepath="$PROJECT_DIR$/viewandutil/viewandutil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/share/share.iml" filepath="$PROJECT_DIR$/share/share.iml" />
+      <module fileurl="file://$PROJECT_DIR$/util/util.iml" filepath="$PROJECT_DIR$/util/util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view/viewandutil.iml" filepath="$PROJECT_DIR$/view/viewandutil.iml" />
     </modules>
   </component>
 </project>

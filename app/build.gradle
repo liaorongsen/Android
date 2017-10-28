@@ -125,9 +125,11 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile project(':viewandutil')
-    compile project(":network")
     compile project(":log")
+    compile project(":network")
+    compile project(":share")
+    compile project(":util")
+    compile project(':view')
     compile 'io.reactivex:rxjava:1.0.14'
     compile 'io.reactivex:rxandroid:1.0.1'
     compile 'com.facebook.react:react-native:0.20.1'

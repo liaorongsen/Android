@@ -1,1 +1,1 @@
-include ':app', ':viewandutil', ':network', ':log'
+include ':app', ':view', ':network', ':log', ':util', ':share'
