@@ -23,6 +23,7 @@ public class MSurfaceView extends SurfaceView implements SurfaceHolder.Callback 
 
     private SurfaceHolder surfaceHolder;
     private float centerX, centerY;
+    private Paint paint;
 
     public MSurfaceView(Context context) {
         this(context, null);
@@ -36,7 +37,10 @@ public class MSurfaceView extends SurfaceView implements SurfaceHolder.Callback 
         super(context, attrs, defStyleAttr);
         surfaceHolder = getHolder();
         surfaceHolder.addCallback(this);
-
+       paint = new Paint();
+        paint.setColor(Color.RED);
+        paint.setStyle(Paint.Style.FILL_AND_STROKE);
+        paint.setStrokeWidth(10);
 
         DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
         centerX = displayMetrics.widthPixels / 2;
@@ -63,6 +67,13 @@ public class MSurfaceView extends SurfaceView implements SurfaceHolder.Callback 
 
     }
 
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+     //   drawUI(canvas, paint);
+    }
+
     public void draw() {
         DrawTask t = new DrawTask();
         Thread thread = new Thread(t);
@@ -82,17 +93,12 @@ public class MSurfaceView extends SurfaceView implements SurfaceHolder.Callback 
 
         @Override
         public void run() {
-            Canvas canvas =
-                    surfaceHolder.lockCanvas();
-
-            Paint paint = new Paint();
-            paint.setColor(Color.RED);
-            paint.setStyle(Paint.Style.FILL_AND_STROKE);
-            paint.setStrokeWidth(10);
-
-            drawUI(canvas, paint);
-
-            surfaceHolder.unlockCanvasAndPost(canvas);
+            while (true) {
+                Canvas canvas =
+                        surfaceHolder.lockCanvas();
+                drawUI(canvas, paint);
+                surfaceHolder.unlockCanvasAndPost(canvas);
+            }
         }
     }
 

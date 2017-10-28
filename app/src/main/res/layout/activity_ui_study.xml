@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.lrs.test.activity.widget.UiStudyActivity">
 
+    <com.lrs.viewandutil.widget.NavigationBar
+        android:id="@+id/navbar"
+        android:layout_width="20dp"
+        android:layout_height="match_parent" />
 
     <com.lrs.viewandutil.widget.MLayout
         android:id="@+id/mlayout"

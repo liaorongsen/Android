@@ -29,7 +29,7 @@ public class MathUtil {
      *
      * @return
      */
-    public static int dp2px(Context context, int dp) {
+    public static int dp2px(Context context, float dp) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dp * scale + 0.5f);
     }
@@ -39,7 +39,7 @@ public class MathUtil {
      *
      * @return
      */
-    public static int px2dp(Context context, int px) {
+    public static int px2dp(Context context, float px) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (px / scale + 0.5f);
     }
