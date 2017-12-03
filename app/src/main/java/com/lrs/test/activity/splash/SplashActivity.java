@@ -3,7 +3,6 @@ package com.lrs.test.activity.splash;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.CountDownTimer;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -15,17 +14,15 @@ import com.example.util.utils.ToastUtil;
 import com.lrs.test.R;
 import com.lrs.test.activity.base.BaseActivity;
 import com.lrs.test.activity.main.MainActivity;
-import com.squareup.okhttp.Request;
 
 import okhttp3.Call;
-
 
 public class SplashActivity extends BaseActivity {
 
 
     private Button button;
     private ImageView imageView;
-    private static final int TIME = 30000;//30秒倒计时；
+    private static final int TIME = 3000;//30秒倒计时；
 
     private TextView countDownText;
 
@@ -59,7 +56,7 @@ public class SplashActivity extends BaseActivity {
                     }
                 });
 
-        countDownTask.start();
+        countDownTask.start();//
     }
 
     private class CountDownTask extends CountDownTimer {
@@ -74,7 +71,7 @@ public class SplashActivity extends BaseActivity {
             long second = millisUntilFinished / 1000;
 
             countDownText.setText(second + "s");
-            ToastUtil.show(getApplication(), millisUntilFinished + "");
+            // ToastUtil.show(getApplication(), millisUntilFinished + "");
 
 
         }

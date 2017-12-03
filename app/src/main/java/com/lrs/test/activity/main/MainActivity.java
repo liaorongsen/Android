@@ -1,6 +1,10 @@
 package com.lrs.test.activity.main;
 
 
+import android.animation.ObjectAnimator;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,6 +13,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 
 import com.lrs.test.activity.base.BaseActivity;
 import com.lrs.test.R;
@@ -16,7 +21,7 @@ import com.lrs.test.R;
 
 public class MainActivity extends BaseActivity implements AdapterView.OnItemClickListener {
 
-
+    private ImageView circleImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +31,19 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        circleImageView = findViewById(R.id.circle_image);
+
+//        MediaPlayer mediaPlayer=new MediaPlayer();
+//        mediaPlayer.
+
+
+        SoundPool soundPool = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
+        int id = soundPool.load("a.mp3", 1);
+
+        soundPool.play(id, 0.5f, 0.5f, 1, -1, 0.5f);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +85,6 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
     }
-
 
 
 }

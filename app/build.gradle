@@ -1,3 +1,5 @@
+import java.text.DateFormat
+
 apply plugin: 'com.android.application'
 
 android {
@@ -20,6 +22,7 @@ android {
         }
     }
 
+
     signingConfigs {
         release {
             storeFile file("release.keystore")
@@ -28,9 +31,16 @@ android {
             keyPassword "test1234"
         }
     }
-    buildTypes {
-        debug {//debug版本使用一个自动创建的密钥/证书，并使用已知的name/password来签名(防止构建过程中出现请求提示)。
 
+
+    buildTypes {
+
+        Date date = new Date();
+        String d = date.toLocaleString();
+        debug {//debug版本使用一个自动创建的密钥/证书，并使用已知的name/password来签名(防止构建过程中出现请求提示)。
+            minifyEnabled false
+            debuggable true
+            jniDebuggable true
         }
         release {//release版本在构建过程中没有签名，需要稍后签名。
             minifyEnabled false //是否开起混淆
@@ -40,29 +50,44 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    /**
-     * 产品定制,defaultConfig为所有的flavor提供默认的配置，
-     * 每个flavor都可以覆盖配置项的值。他们享有共同的属性；
-     * 通常，Build Type配置会覆盖其他配置。例如Build Type‘的packageNameSuffix
-     * 会添加到Product Flavor‘的 packageName上。
-     * flavor的名字不能喝已有的构建类型(Build Type)名字冲突，或者和androidTest这个sourceSet的名字冲突。
-     */
-    productFlavors {
+//    /**
+//     * 产品定制,defaultConfig为所有的flavor提供默认的配置，
+//     * 每个flavor都可以覆盖配置项的值。他们享有共同的属性；
+//     * 通常，Build Type配置会覆盖其他配置。例如Build Type‘的packageNameSuffix
+//     * 会添加到Product Flavor‘的 packageName上。
+//     * flavor的名字不能喝已有的构建类型(Build Type)名字冲突，或者和androidTest这个sourceSet的名字冲突。
+//     */
+//    productFlavors {
+//
+//        tencent {
+//
+//        }
+//
+//        xiaomi {
+//
+//        }
+//
+//        huawei {
+//
+//        }
+//
+//    }
 
-        tencent {
+    String formPath = ".\\raw\\a.mp3";
+    String toPath = ".\\assert\\b.mp3";
+    copy {
+        from(formPath, {
+            include("---")
+        })
 
-        }
-
-        xiaomi {
-
-        }
-
-        huawei {
-
-        }
-
+        into(toPath)
     }
 
+    print formPath; print(toPath)
+    println "---------------------$name------------------" + project.description + "--------->"
+    tasks.each {
+        println "----->" + it.name
+    }
     lintOptions {
         // set to true to turn off analysis progress reporting by lint
         quiet true
@@ -115,6 +140,12 @@ android {
         ignore 'TypographyQuotes'
     }
 
+
+    android.applicationVariants.all {
+        out -> println("----------------------->"+out.getSourceSets())
+    }
+
+
 }
 configurations.all {
     resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
@@ -125,11 +156,11 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile project(":log")
-    compile project(":network")
-    compile project(":share")
-    compile project(":util")
-    compile project(':view')
+    implementation project(':log')
+    implementation project(':network')
+    implementation project(':share')
+    implementation project(':util')
+    implementation project(':view')
     compile 'io.reactivex:rxjava:1.0.14'
     compile 'io.reactivex:rxandroid:1.0.1'
     compile 'com.facebook.react:react-native:0.20.1'
@@ -137,4 +168,13 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:support-v4:27.0.1'
+}
+
+
+print("-->$name" + "-->" + getProject().getAllTasks(true))
+
+
+def getTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
 }

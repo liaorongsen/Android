@@ -24,6 +24,11 @@ android {
 
 }
 
+
+
+Project project = getProject()
+print("----->$name------>" + project.toString())
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
