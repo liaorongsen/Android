@@ -142,10 +142,16 @@ android {
 
 
     android.applicationVariants.all {
-        out -> println("----------------------->"+out.getSourceSets())
+        out -> println("----------------------->" + out.getSourceSets())
     }
 
 
+}
+
+
+
+tasks.all {
+    println("------->" + it.name)
 }
 configurations.all {
     resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
@@ -168,7 +174,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.android.support:design:26.1.0'
-    implementation 'com.android.support:support-v4:27.0.1'
+    implementation 'com.android.support:support-v4:26.1.0'
 }
 
 
